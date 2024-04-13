@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RF Demo Site</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none; /* Removes underline from links */
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body style="margin:50px 100px">
+
+
+    <h1>RF Demo Site</h1>
+    <br>
+
+    <h2>Alert</h2>
+    <button id="alertPopup" class="button" onclick="showAlertBox()">Klik mij voor een JavaScript alert</button>
+
+    <h2>Input</h2>
+    <button id="inputBox" class="button" onclick="showInputBox()">Klik my voor een input box</button>
+    <div id="showMyName"></div>
+
+    <h2>Download a file</h2>
+    <a href="filename.ext" download class="button" id="downloadFile">
+        Download File
+    </a>
+
+
+    <script>
+        function showAlertBox() {
+            alert("Hallo!");
+        }
+
+        function showInputBox() {
+            const myName = prompt("Wat is je naam?");
+            if (myName != null) {
+                document.getElementById("showMyName").innerHTML =
+                    "Hallo " + myName + "!";
+            }
+        }
+
+    </script>
+</body>
+</html>
