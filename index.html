@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>RF Demo Site</title>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 <body style="margin:50px 100px">
-
 
     <h1>RF Demo Site</h1>
     <hr>
@@ -18,22 +18,14 @@
     <button id="inputBox" class="button" onclick="showInputBox()">Klik mij voor een JavaScript input</button>
     <div id="showMyName"></div>
 
+    <h2>Slow to be enabled</h2>
+    <button id="slowToEnable" class="button" onclick="showAlertBox()" disabled>Klik mij zodra het kan</button>
+
+    <h2>Start flaky process</h2>
+    <button id="flakyProcess" class="button" onclick="startFlakyProcess()">Start process</button>
+
     <h2>Download a file</h2>
     <a href="https://download.jetbrains.com/python/pycharm-community-2024.1.exe" download class="button" id="downloadFile">Download PyCharm (~700 MB)</a>
 
-    <script>
-        function showAlertBox() {
-            alert("Hallo!");
-        }
-
-        function showInputBox() {
-            const myName = prompt("Wat is je naam?");
-            if (myName != null) {
-                document.getElementById("showMyName").innerHTML =
-                    "Hallo " + myName + "!";
-            }
-        }
-
-    </script>
 </body>
 </html>
