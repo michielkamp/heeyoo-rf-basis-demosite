@@ -28,7 +28,7 @@ function percentChance(chance) {
 }
 
 function startFlakyProcess() {
-    if (percentChance(0.3)) {
+    if (percentChance(0.5)) {
         console.log("Process will start soon...")
         setTimeout(function() {
             window.open("processStarted.html", "_self");
