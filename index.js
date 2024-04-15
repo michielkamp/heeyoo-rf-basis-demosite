@@ -13,11 +13,10 @@ function showInputBox() {
 }
 
 function waitToEnable() {
-    const randomTime = (Math.random() * 10000) + 2000;
     setTimeout(function() {
-        console.log("Waited for " + randomTime + " milliseconds.");
+        console.log("Wait 5 seconds to enable button");
         document.getElementById("slowToEnable").disabled = false;
-    }, randomTime);
+    }, 5000);
 }
 
 function percentChance(chance) {
