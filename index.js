@@ -1,3 +1,5 @@
+
+
 function showAlertBox() {
     alert("Hallo!");
     document.getElementById("slowToEnable").disabled = true;
@@ -36,6 +38,10 @@ function startFlakyProcess() {
     } else {
         console.log('FAIL: process will not start');
     }
+}
+
+function openFileChooser() {
+    document.getElementById('fileInput').click();
 }
 
 waitToEnable(10000);

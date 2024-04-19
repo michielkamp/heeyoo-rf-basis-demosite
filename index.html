@@ -24,8 +24,56 @@
     <h2>Start flaky process</h2>
     <button id="flakyProcess" class="button" onclick="startFlakyProcess()">Start process</button>
 
+    <h2>Upload a file</h2>
+    <input type="file" id="fileInput" style="display: none;">
+    <button class="button" onclick="openFileChooser()">Choose Image</button>
+    <button class="button" onclick="clearImage()">Clear Image</button>
+    <div id="imageContainer" style="border: 1px solid black; padding: 10px; margin-top: 10px;"></div>
+
     <h2>Download a file</h2>
     <a href="https://download.jetbrains.com/python/pycharm-community-2024.1.exe" download class="button" id="downloadFile">Download PyCharm (~700 MB)</a>
+
+    <script>
+        function handleFile() {
+            const fileInput = document.getElementById('fileInput');
+            const imageContainer = document.getElementById('imageContainer');
+
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                console.log('Chosen file:', file);
+                console.log('File name:', file.name);
+                console.log('File size:', file.size, 'bytes');
+                console.log('File type:', file.type);
+
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+
+                        const imgElement = document.createElement('img');
+                        imgElement.src = event.target.result;
+                        imgElement.style.maxWidth = '100%';
+                        imgElement.classList.add('chosenImage');
+
+                        imageContainer.innerHTML = '';
+                        imageContainer.appendChild(imgElement);
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    imageContainer.innerHTML = 'Selected file is not an image.';
+                }
+            } else {
+                console.log('No file selected.');
+                imageContainer.innerHTML = '';
+            }
+        }
+
+        function clearImage() {
+            const imageContainer = document.getElementById('imageContainer');
+            imageContainer.innerHTML = '';
+        }
+
+        document.getElementById('fileInput').addEventListener('change', handleFile);
+    </script>
 
 </body>
 </html>
