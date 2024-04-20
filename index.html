@@ -12,22 +12,22 @@
     <hr>
 
     <h2>Alert</h2>
-    <button id="alertPopup" class="button" onclick="showAlertBox()">Klik mij voor een JavaScript alert</button>
+    <button id="alertPopup" class="button" onclick="showAlertBox()">JavaScript alert</button>
 
     <h2>Input</h2>
-    <button id="inputBox" class="button" onclick="showInputBox()">Klik mij voor een JavaScript input</button>
+    <button id="inputBox" class="button" onclick="showInputBox()">JavaScript input</button>
     <div id="showMyName"></div>
 
     <h2>Slow to be enabled</h2>
-    <button id="slowToEnable" class="button" onclick="showAlertBox()" disabled>Klik mij zodra het kan</button>
+    <button id="slowToEnable" class="button" onclick="showAlertBox()" disabled>Disabled/enabled button</button>
 
     <h2>Start flaky process</h2>
     <button id="flakyProcess" class="button" onclick="startFlakyProcess()">Start process</button>
 
     <h2>Upload a file</h2>
     <input type="file" id="fileInput" style="display: none;">
-    <button class="button" onclick="openFileChooser()">Choose Image</button>
-    <button class="button" onclick="clearImage()">Clear Image</button>
+    <button id="chooseImage" class="button" onclick="openFileChooser()">Choose Image</button>
+    <button id="clearImage" class="button" onclick="clearImage()">Clear Image</button>
     <div id="imageContainer" style="border: 1px solid black; padding: 10px; margin-top: 10px;"></div>
 
     <h2>Download a file</h2>
