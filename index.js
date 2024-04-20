@@ -19,11 +19,12 @@ function waitToEnable() {
     }, 5000);
 }
 
+function showEnableResult() {
+    document.getElementById("slowEnableResult").innerHTML = "Button clicked!"
+}
+
 function percentChance(chance) {
-    if (Math.random() <= chance)
-        return true;
-    else
-        return false;
+    return Math.random() <= chance;
 }
 
 function startFlakyProcess() {

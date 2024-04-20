@@ -11,15 +11,16 @@
     <h1>RF Demo Site</h1>
     <hr>
 
-    <h2>Alert</h2>
+    <h2>JavaScript Alert</h2>
     <button id="alertPopup" class="button" onclick="showAlertBox()">JavaScript alert</button>
 
-    <h2>Input</h2>
+    <h2>JavaScript Input</h2>
     <button id="inputBox" class="button" onclick="showInputBox()">JavaScript input</button>
     <div id="showMyName"></div>
 
     <h2>Slow to be enabled</h2>
-    <button id="slowToEnable" class="button" onclick="showAlertBox()" disabled>Disabled/enabled button</button>
+    <button id="slowToEnable" class="button" onclick="showEnableResult()" disabled>Disabled/enabled button</button>
+    <span id="slowEnableResult" class="border">Result:</span>
 
     <h2>Start flaky process</h2>
     <button id="flakyProcess" class="button" onclick="startFlakyProcess()">Start process</button>
@@ -28,7 +29,7 @@
     <input type="file" id="fileInput" style="display: none;">
     <button id="chooseImage" class="button" onclick="openFileChooser()">Choose Image</button>
     <button id="clearImage" class="button" onclick="clearImage()">Clear Image</button>
-    <div id="imageContainer" style="border: 1px solid black; padding: 10px; margin-top: 10px;"></div>
+    <div id="imageContainer" class="border">Image:</div>
 
     <h2>Download a file</h2>
     <a href="https://download.jetbrains.com/python/pycharm-community-2024.1.exe" download class="button" id="downloadFile">Download PyCharm (~700 MB)</a>
