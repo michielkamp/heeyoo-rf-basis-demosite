@@ -14,9 +14,9 @@ function showInputBox() {
 
 function waitToEnable() {
     setTimeout(function() {
-        console.log("Wait 5 seconds to enable button");
+        console.log("Wait 12 seconds to enable button");
         document.getElementById("slowToEnable").disabled = false;
-    }, 5000);
+    }, 12000);
 }
 
 function showEnableResult() {
